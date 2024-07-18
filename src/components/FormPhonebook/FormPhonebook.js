@@ -8,6 +8,7 @@ import {
   LabelStyle,
   InputSt,
   Wrapper,
+  MainHeading,
 } from './FormPhonebook.styled';
 
 export function FormPhonebook() {
@@ -64,7 +65,7 @@ const handlephoneChange = event => {
 
   return (
     <Wrapper>
-      <h1>Phonebook</h1>
+      <MainHeading>Phonebook</MainHeading>
       <FormPhB onSubmit={handleSubmit}>
         <LabelStyle>Name</LabelStyle>
         <InputSt
@@ -73,6 +74,7 @@ const handlephoneChange = event => {
           pattern="^[a-zA-Zа-яА-Я]+([' \-][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
+          placeholder="for example Adrian, Jacob Mercer"
           value={name}
           onChange={handleNameChange}
         />
@@ -83,6 +85,7 @@ const handlephoneChange = event => {
           pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
           title="Phone phone must be digits and can contain spaces, dashes, parentheses and can start with +"
           required
+          placeholder="for example: 345-33-33"
           value={phone}
           onChange={handlephoneChange}
         />

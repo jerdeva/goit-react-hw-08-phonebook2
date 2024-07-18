@@ -1,6 +1,6 @@
 import React from 'react';
 import Wrapper from './FormList.styled';
-import { LabelSt, InputSt } from './FormList.styled';
+import { LabelSt, InputSt, HeadingElement } from './FormList.styled';
 import { selectContacts, selectFilter } from 'redux/selectors';
 import { useDispatch, useSelector } from 'react-redux';
 import { setContactsFilter } from 'redux/filterSlice';
@@ -18,7 +18,7 @@ export function FilterForm ()  {
 
   return (
     <Wrapper>
-      <h2>Contacts:</h2>
+      <HeadingElement>Contacts:</HeadingElement>
       <LabelSt htmlFor="filter">
         Find contacts by name
         <InputSt
